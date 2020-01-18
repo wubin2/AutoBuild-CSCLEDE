@@ -12,8 +12,8 @@ Build OpenWRT firware using Github actions for X86\Newifi\K3\GL-iNet elses.
 
 - Sign up for [GitHub Actions](https://github.com/features/actions/signup). 
 - Fork [this GitHub repository](https://github.com/wubin2/AutoBuild-CSCLEDE). 
-- Click [.github/workflows] folder on the top of repo and you could see few workflow files, Each for one particular architecture(device). 
-- Edit the workflow file you desire，uncomment push section 3 lines together and submit the commit. 
+- Click [`.github/workflows`] folder on the top of repo and you could see few workflow files, Each for one particular architecture(device). 
+- Edit `CSCLEDE-device.yml` file that your choice，uncomment push section 3 lines together and submit the commit. 
 - The build starts automatically. Progress can be viewed on the `Actions` page. 
 - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the zip file. 
 
