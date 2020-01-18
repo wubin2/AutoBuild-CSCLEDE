@@ -1,8 +1,8 @@
 name: CSCLEDE-GL-MT300N-V2
 on: 
-  push:
-    branches: 
-      - master
+  #push:
+  #  branches: 
+  #    - master
   release:
     types: [published]
   schedule:
