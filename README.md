@@ -6,9 +6,9 @@
 
 ![MENU](docs/menu.png)  
 
-Build OpenWRT firware using Github actions for X86\Newifi\K3\GL-iNet elses.  
-
 ## Usage 
+
+Build OpenWRT firware using Github actions for X86\Newifi\K3\GL-iNet elses.  
 
 - IP: `192.168.1.1`  
 - Username&Password: Please change your password for the first time login!  
