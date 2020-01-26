@@ -18,8 +18,6 @@ Build OpenWRT firware using Github actions for X86\Newifi\K3\GL-iNet elses.
 
 ## Default Setting  
 
-![CSCLEDE-X86-64](https://github.com/wubin2/AutoBuild-CSCLEDE/workflows/CSCLEDE-X86-64/badge.svg)
-
 - IP: `192.168.1.1`  
 - Username&Password: Please change your password for the first time login!  
 - WiFiSSID: `CSCLEDE`  
