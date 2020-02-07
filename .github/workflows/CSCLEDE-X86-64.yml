@@ -5,8 +5,8 @@ on:
   #    - master
   release:
     types: [published]
-  schedule:
-    - cron: 15 20 * * 4
+  #schedule:
+  #  - cron: 15 20 * * 4
   #watch:
   #  types: [started]
 jobs:
