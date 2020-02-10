@@ -1,8 +1,8 @@
 name: CSCLEDE-Newifi_D2
 on: 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
   release:
     types: [published]
   schedule:
