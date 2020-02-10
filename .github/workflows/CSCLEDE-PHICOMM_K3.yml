@@ -5,8 +5,8 @@ on:
   #    - master
   release:
     types: [published]
-  #schedule:
-  #  - cron: 20 20 5,15,25 * *
+  schedule:
+    - cron: 20 20 5,15,25 * *
   #watch:
   #  types: [started]
 jobs:
@@ -60,8 +60,8 @@ jobs:
         git clone https://github.com/vernesong/OpenClash.git
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         rm -rf OpenClash
-        cd luci-theme-argon/htdocs/luci-static/argon/css
-        wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
+        #cd luci-theme-argon/htdocs/luci-static/argon/css
+        #wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
