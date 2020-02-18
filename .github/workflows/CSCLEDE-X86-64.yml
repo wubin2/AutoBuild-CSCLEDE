@@ -55,16 +55,16 @@ jobs:
         git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR.git
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
         git clone https://github.com/happyzhang1995/openwrt-adguardhome.git
-        git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo.git
-        git clone https://github.com/Leo-Jo-My/my.git
-        mv my/chinadns my/dnscrypt-proxy-full my/GoQuiet my/openwrt-simple-obfs -t ./
+        #git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo.git
+        #git clone https://github.com/Leo-Jo-My/my.git
+        #mv my/chinadns my/dnscrypt-proxy-full my/GoQuiet my/openwrt-simple-obfs -t ./
         git clone https://github.com/vernesong/OpenClash.git
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         git clone https://github.com/tty228/luci-app-serverchan.git
         git clone https://github.com/jerrykuku/luci-theme-argon.git
         rm -rf OpenClash && rm -rf my
-        #cd luci-theme-argon/htdocs/luci-static/argon/css
-        #wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
+        cd luci-theme-argon/htdocs/luci-static/argon
+        wget -O cascade.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/cascade.css
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
