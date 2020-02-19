@@ -7,7 +7,7 @@ on:
     types: [published]
   schedule:
     - cron: 15 20 14 * *
-  watch:
+  #watch:
   #  types: [started]
 jobs:
   build:
