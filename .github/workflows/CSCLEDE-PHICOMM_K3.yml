@@ -56,7 +56,7 @@ jobs:
         git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR.git
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
         git clone https://github.com/happyzhang1995/openwrt-adguardhome.git
-        git clone https://github.com/jerrykuku/luci-theme-argon.git
+        git clone https://github.com/wubin2/luci-theme-argon-my.git
         git clone https://github.com/vernesong/OpenClash.git
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         rm -rf OpenClash
@@ -65,6 +65,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
         sed -i '4a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/others/luci-app-verysync  && rm -rf feeds/lienol/package/shadowsocksr-libev  && rm -rf feeds/lienol/package/trojan  && rm -rf feeds/lienol/package/v2ray  && rm -rf feeds/lienol/package/pdnsd-alt  && rm -rf feeds/lienol/package/openssl1.1  && rm -rf feeds/lienol/package/ipt2socks  && rm -rf feeds/lienol/package/verysync  && rm -rf package/lean/kcptun  && rm -rf package/lean/luci-app-kodexplorer  && rm -rf package/lean/luci-app-pppoe-relay  && rm -rf package/lean/luci-app-pptp-server  && rm -rf package/lean/luci-app-v2ray-server
