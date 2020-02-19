@@ -14,7 +14,7 @@ sed -i '/^exit 0/i echo 0xDEADBEEF > /etc/config/google_fu_mode' openwrt/package
 sed -i 's/OpenWrt/CSCLEDE/g ; s/none/psk2/g' openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i '/^EOF/i \            \set wireless.default_radio${devidx}.key=coolsong' openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
 mv banner_csc openwrt/package/base-files/files/etc/banner
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
 #set luci-app-openclash to vpn menu
 sed -i 's/services/vpn/g' openwrt/package/coolsong/luci-app-openclash/files/usr/lib/lua/luci/controller/*.lua
 sed -i 's/services/vpn/g' openwrt/package/coolsong/luci-app-openclash/files/usr/lib/lua/luci/model/cbi/openclash/*.lua
