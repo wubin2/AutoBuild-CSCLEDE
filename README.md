@@ -22,7 +22,7 @@ Build OpenWRT firware using Github actions for X86\Newifi\K3\GL-iNet elses.
 - Username&Password: Please change your password for the first time login!  
 - WiFiSSID: `CSCLEDE`  
 - WiFiPassword: `coolsong`  
-- Schedule: X86-64 runs at 04:15 on every Fri, Others runs at 04:20 on the 6, 16 and 26th of every month.
+- Schedule: AutoBuild runs at 04:15 on the 15th of every month.
 
 ## Acknowledgments
 
