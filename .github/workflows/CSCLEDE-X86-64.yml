@@ -68,6 +68,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
         sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
         sed -i '4a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
         ./scripts/feeds update -a
