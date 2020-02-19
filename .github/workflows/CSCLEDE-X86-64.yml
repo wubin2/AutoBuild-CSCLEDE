@@ -1,8 +1,8 @@
 name: CSCLEDE-X86-64
 on: 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
   release:
     types: [published]
   schedule:
@@ -61,10 +61,10 @@ jobs:
         git clone https://github.com/vernesong/OpenClash.git
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         git clone https://github.com/tty228/luci-app-serverchan.git
-        git clone https://github.com/jerrykuku/luci-theme-argon.git
+        git clone https://github.com/wubin2/luci-theme-argon-my.git
         rm -rf OpenClash && rm -rf my
-        cd luci-theme-argon/htdocs/luci-static/argon
-        wget -O cascade.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/cascade.css
+        #cd luci-theme-argon/htdocs/luci-static/argon
+        #wget -O cascade.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/cascade.css
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
