@@ -68,13 +68,13 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
         sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
         sed -i '4a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/others/luci-app-verysync && rm -rf feeds/lienol/package/shadowsocksr-libev && rm -rf feeds/lienol/package/trojan && rm -rf feeds/lienol/package/v2ray && rm -rf feeds/lienol/package/pdnsd-alt && rm -rf feeds/lienol/package/openssl1.1 && rm -rf feeds/lienol/package/ipt2socks && rm -rf feeds/lienol/package/verysync && rm -rf package/lean/kcptun && rm -rf package/lean/luci-app-kodexplorer && rm -rf package/lean/luci-app-pppoe-relay && rm -rf package/lean/luci-app-pptp-server && rm -rf package/lean/luci-app-v2ray-server && rm -rf package/lean/luci-theme-argon
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'x86_64.config'
