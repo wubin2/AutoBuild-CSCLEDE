@@ -65,10 +65,10 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_Newifi_D2
       env:
         CONFIG_FILE: 'newifi_d2.config'
