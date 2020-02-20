@@ -48,10 +48,10 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_Lenovo_Newifi-Y1Y1S
       env:
         CONFIG_FILE: 'lenovo_newifi-y1y1s.config'
