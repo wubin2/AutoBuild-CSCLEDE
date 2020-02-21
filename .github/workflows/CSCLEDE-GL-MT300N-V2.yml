@@ -69,7 +69,7 @@ jobs:
         sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_GL-MT300N-V2
       env:
-        CONFIG_FILE: 'gl-mt300n-v2.config'
+        CONFIG_FILE: 'diffconfig_gl-mt300n-v2.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh

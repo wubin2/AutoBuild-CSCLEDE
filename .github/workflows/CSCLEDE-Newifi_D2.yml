@@ -71,7 +71,7 @@ jobs:
         sed -i 's/luci-theme-bootstrap/luci-theme-argon-my/g' feeds/luci/collections/luci/Makefile
     - name: Configuration Customization - Build_Newifi_D2
       env:
-        CONFIG_FILE: 'newifi_d2.config'
+        CONFIG_FILE: 'diffconfig_newifi_d2.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
